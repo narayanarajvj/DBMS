@@ -53,6 +53,9 @@
     /*}*/
 </style>
 <body>
+<%
+    response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
+%>
 <%--<form action="index.jsp" method="post">--%>
 <%--    <button name="shop" value="" type="submit">--%>
 <%--        Go to Home--%>

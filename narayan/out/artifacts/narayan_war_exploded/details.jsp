@@ -8,6 +8,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <head>
     <title>Customer Checkout Details</title>
 </head>
@@ -64,6 +65,9 @@
     }
 </style>
 <body class="bi">
+<%
+    response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
+%>
 <h2 style="font-family: 'Book Antiqua'; color: goldenrod; font-size: 30px; margin-top: 20px; margin-left: 10px;">Enter your Details:</h2>
 
 <div class="div1">

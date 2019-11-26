@@ -69,6 +69,9 @@
     }
 </style>
 <body class="bi">
+<%
+    response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
+%>
 <h2 style="font-family: 'Book Antiqua'; color: goldenrod; font-size: 30px;">Enter your Delivery Details:</h2>
 
     <div class="div1">

@@ -34,6 +34,9 @@
     }
 </style>
 <body>
+<%
+    response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
+%>
 <form action="order_placed" method="post">
 <p class="in"> <br>Thank You!<br>
  Visit Again.. </p>

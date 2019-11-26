@@ -27,7 +27,6 @@
         font-size: 50px;
         color: black;
         font-family: "Bookman Old Style";
-
     }
     body {
         background-color: peachpuff;
@@ -59,7 +58,6 @@
     }
     .out{
         margin-bottom: auto;
-
     }
     .click{
         text-decoration: underline;
@@ -107,61 +105,61 @@
 <body>
 <h2>Cart</h2>
 <form action="cart" method="post">
-<table>
-    <tr>
-        <th>PID</th>
-        <th>Product Name</th>
-        <th>Price</th>
-    </tr>
+    <table>
+        <tr>
+            <th>PID</th>
+            <th>Product Name</th>
+            <th>Price</th>
+        </tr>
         <%
             while(rs.next()){
 //                if(!rs.next()){
 //                    break;
 //                }
         %>
-    <tr>
-        <td><%=rs.getInt("pid")%></td>
-        <td><%=rs.getString("name")%></td>
-        <td><%=rs.getInt("price")%></td>
-<%--        <td><form action="delete" method="post">--%>
-<%--            <button name="delete"  type="button" value="<%= rs.getString("pid")%>" >Remove</button>--%>
-<%--        </form></td>--%>
-        <td><a href="delete.jsp?id=<%=rs.getString("id") %>">
-            <button name="button" type="button" class="delete"><i class="fa fa-times" aria-hidden="true"></i> Remove</button></a></td>
-    </tr
-</table>
-        <% }
+        <tr>
+            <td><%=rs.getInt("pid")%></td>
+            <td><%=rs.getString("name")%></td>
+            <td><%=rs.getInt("price")%></td>
+            <%--        <td><form action="delete" method="post">--%>
+            <%--            <button name="delete"  type="button" value="<%= rs.getString("pid")%>" >Remove</button>--%>
+            <%--        </form></td>--%>
+            <td><a href="delete.jsp?id=<%=rs.getString("id") %>">
+                <button name="button" type="button" class="delete"><i class="fa fa-times" aria-hidden="true"></i> Remove</button></a></td>
+        </tr
+    </table>
+    <% }
 //            Statement st=conn.createStatement();
 //            String str1 = "SELECT SUM(price) FROM cart";
 //            ResultSet rs1 = st.executeQuery(str1);
-            CallableStatement cst = conn.prepareCall("{CALL totalprice ()}");
-            ResultSet rs1 = cst.executeQuery();
-            String total=null;
-            while(rs1.next()){
-                total=rs1.getString(1);
-            }
-           rs.close();
-            rs1.close();
-           stmt.close();
-           cst.close();
-           conn.close();
-         %>
+        CallableStatement cst = conn.prepareCall("{CALL totalprice ()}");
+        ResultSet rs1 = cst.executeQuery();
+        String total=null;
+        while(rs1.next()){
+            total=rs1.getString(1);
+        }
+        rs.close();
+        rs1.close();
+        stmt.close();
+        cst.close();
+        conn.close();
+    %>
 </form>
 <div class="bloc">
     <%if(total!=null){%>
     <p class="tot">Total Price: <i class="fa fa-inr" aria-hidden="true" aria-setsize="4"></i><%=Integer.parseInt(total)%></p>
     <% }%>
-<form action="index.jsp" method="post">
-    <button class="shop" name="shop" value="" type="submit" style="margin-left: 190px"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
-        Continue Shopping
-    </button>
-</form>
+    <form action="index.jsp" method="post">
+        <button class="shop" name="shop" value="" type="submit" style="margin-left: 190px"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+            Continue Shopping
+        </button>
+    </form>
     <%if(total!=null){%>
-<form action="details.jsp" method="post">
-    <button class="out" name="out" value="" type="submit"><i class="fa fa-check" aria-hidden="true"></i>
-        Check Out
-    </button>
-</form>
+    <form action="details.jsp" method="post">
+        <button class="out" name="out" value="" type="submit"><i class="fa fa-check" aria-hidden="true"></i>
+            Check Out
+        </button>
+    </form>
     <p class="cl">If you require Shipping, Please <a href="shipping.jsp" class="click">  Click here</a></p>
     <% }%>
 </div>

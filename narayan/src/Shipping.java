@@ -53,7 +53,7 @@ public class Shipping extends HttpServlet {
                     ps.executeUpdate();
                     System.out.println("successfully inserted");
 
-                    String query2 = "insert into details (id,name,phone,price) values(?,?,?,?);";
+                    String query2 = "insert into details (id,name,phone,price,shipping,address,city,pincode) values(?,?,?,?,?,?,?,?);";
                     PreparedStatement ps1 = con.prepareStatement(query2);
 
                     CallableStatement cst = con.prepareCall("{CALL totalprice ()}");
@@ -67,6 +67,11 @@ public class Shipping extends HttpServlet {
                     ps1.setString(2, fullname);
                     ps1.setString(3, mobile);
                     ps1.setInt(4,total);
+                    ps1.setString(5,"Required");
+                    ps1.setString(6,address);
+                    ps1.setString(7,city);
+                    ps1.setString(8,pincode);
+
 
                     ps1.executeUpdate();
                     System.out.println("success");
@@ -81,6 +86,7 @@ public class Shipping extends HttpServlet {
                     if(s.equals("5")){
                         response.sendRedirect("order_placed");
                     }
+
 
 //                    response.setHeader("Cache-Control","no-cache");
 //                    response.setHeader("Cache-Control","no-store");

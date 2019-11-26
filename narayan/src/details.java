@@ -34,7 +34,7 @@ public class details extends HttpServlet {
             Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:MySQL://localhost/emart", "root", "Narayan@123");
 
-            String query1 = "insert into details (id,name,phone,price) values(?,?,?,?);";
+            String query1 = "insert into details (id,name,phone,price,shipping) values(?,?,?,?,?);";
 
             PreparedStatement ps = con.prepareStatement(query1);
             CallableStatement cst = con.prepareCall("{CALL totalprice ()}");
@@ -49,6 +49,7 @@ public class details extends HttpServlet {
             ps.setString(2, fullname);
             ps.setString(3, mobile);
             ps.setInt(4,total);
+            ps.setString(5,"Not required");
 
             ps.executeUpdate();
             System.out.println("successfully inserted");

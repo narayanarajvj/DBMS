@@ -98,7 +98,7 @@
         background-color: rgb(88, 87, 87);
         font-size:30px;
         font-family:'Megrim', cursive;
-        color: white;
+        color: deepskyblue;
         display:inline-block;
         position: relative;
     }
@@ -179,6 +179,7 @@
             <p style="text-align: center;">1800-000-0000</p>
         </div>
     </div>
+    <a href="login.jsp"  style="position:relative;margin-right: 0px;right: 105px;padding-top: 18px;"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a>
     <div class="tit">
         <a href="#"><i class="fa fa-bluetooth-b fa-2x" aria-hidden="true"></i> BIGILEYY</a>
     </div>
@@ -196,7 +197,7 @@
 
 
 
-    <button class="tablink" onclick="openItem('Electronics', this, 'red')" id="defaultOpen">Electronics Products</button>
+    <button class="tablink" onclick="openItem('Electronics', this, 'deeppink')" id="defaultOpen">Electronics Products</button>
     <button class="tablink" onclick="openItem('Home', this, 'green')">Home Appliances</button>
 </section>
 
