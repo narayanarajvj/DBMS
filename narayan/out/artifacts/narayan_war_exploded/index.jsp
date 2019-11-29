@@ -181,7 +181,7 @@
     </div>
     <a href="login.jsp"  style="position:relative;margin-right: 0px;right: 105px;padding-top: 18px;"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a>
     <div class="tit">
-        <a href="#"><i class="fa fa-bluetooth-b fa-2x" aria-hidden="true"></i> BIGILEYY</a>
+        <a href="#"><i class="fa fa-bluetooth-b fa-2x" aria-hidden="true"></i> E-Mart</a>
     </div>
 </div>
 <section class= "bloc">

@@ -39,6 +39,7 @@
         font-size: 25px;
         clip-path: rect(100% 0, 100% 0, 100% 100%,0 100%);
         background-color: honeydew;
+        padding: 5px 30px 5px 30px;
     }
     table {
         border-collapse: separate;
@@ -112,13 +113,6 @@
     }
 %>
 <div class="ca">
-    <form action="ship2.jsp" method="post">
-        <button class="shi" name="ship" value="" type="submit"></i>
-            Only Shipping
-        </button>
-    </form>
-</div>
-<div class="ca">
     <form action="logout" method="get">
         <input type="submit" value="Logout">
     </form>
@@ -126,6 +120,13 @@
 <h2>Customer Details</h2>
 <div class="ca">
     <input type="submit" value="Download PDF" name="download" onclick="window.print()" />
+</div>
+<div class="ca">
+    <form action="ship2.jsp" method="post">
+        <button class="shi" name="ship" value="" type="submit" style="margin-bottom: 20px;"></i>
+            Only Shipping
+        </button>
+    </form>
 </div>
 <form action="" method="post">
     <table>
@@ -160,6 +161,7 @@
         stmt.close();
         conn.close();
     %>
+
 </form>
 </body>
 </html>

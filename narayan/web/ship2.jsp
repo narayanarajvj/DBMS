@@ -38,6 +38,7 @@
         font-size: 25px;
         clip-path: rect(100% 0, 100% 0, 100% 100%,0 100%);
         background-color: honeydew;
+        padding: 5px 40px 5px 40px;
     }
     table {
         border-collapse: separate;
