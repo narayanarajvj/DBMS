@@ -15,6 +15,8 @@
         width: auto;
         background-color: #555;
         overflow: auto;
+        padding-top: 2px;
+        padding-bottom: 0px;
     }
 
     .navbar a {
@@ -45,7 +47,7 @@
         border: none;
         outline: none;
         cursor: pointer;
-        padding: 14px 16px;
+        padding: 18px 16px;
         font-size: 17px;
         width: 50%;
     }
@@ -160,7 +162,7 @@
         color: black;
         background-color:cornsilk;
         width:10%;
-        padding: 10px 10px 10px 10px;
+        padding: 13px 13px 13px 13px;
         border: 1px solid black;
         border-radius: 5px;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;\
@@ -181,7 +183,7 @@
     </div>
     <a href="login.jsp"  style="position:relative;margin-right: 0px;right: 105px;padding-top: 18px;"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a>
     <div class="tit">
-        <a href="#"><i class="fa fa-bluetooth-b fa-2x" aria-hidden="true"></i> E-Mart</a>
+        <a href="#"><i class="fa fa-bluetooth-b fa-2x" aria-hidden="true" style="color:red"></i> E-Mart</a>
     </div>
 </div>
 <section class= "bloc">
